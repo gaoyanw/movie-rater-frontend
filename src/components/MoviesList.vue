@@ -1,12 +1,19 @@
 <template>
-    <div class="layout"> 
-        <h1> List of movies </h1>
-                <h1> Movie Details </h1>
+    <div class="layout">
+        <div> 
+            <h4 v-for="movie in movies" :key="movie"> {{movie}}  </h4>
+        </div>
+        <h1> Movie Details </h1>
     </div>
 </template>
 <script>
     export default{
-        name: "MoviesList"
+        name: "MoviesList",
+        data(){
+            return {
+                movies:["singler","American Beauty","Seven litte guys"]
+            }
+        }
     }
 </script>
 <style scoped>
